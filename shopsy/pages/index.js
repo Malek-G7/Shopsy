@@ -1,11 +1,12 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Nav from "../Components/nav"
+import Bar from "../Components/SearchBar/search"
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      
+    <div>
+      <Nav/>
+      <Bar/>
     </div>
   )
 }
