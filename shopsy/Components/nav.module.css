@@ -1,0 +1,16 @@
+.nav{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 90px;
+    padding: 30px 25px;
+  }
+  
+  .navtitle{
+    color: #61DAFB;
+    font-weight: 700;
+    font-size: 50px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
