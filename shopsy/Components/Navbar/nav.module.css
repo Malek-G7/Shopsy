@@ -1,0 +1,16 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(75, 126, 79);
+    height: 100px;
+  }
+  
+  .navtitle{
+    color: bisque;
+    font-weight: 900;
+    font-size: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family:cursive;
+  }
+  

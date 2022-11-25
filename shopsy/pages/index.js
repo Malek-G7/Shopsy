@@ -1,12 +1,10 @@
 import styles from '../styles/Home.module.css'
-import Nav from "../Components/nav"
-import Bar from "../Components/SearchBar/search"
+import Nav from "../Components//Navbar/nav"
 
 export default function Home() {
   return (
     <div>
       <Nav/>
-      <Bar/>
     </div>
   )
 }
