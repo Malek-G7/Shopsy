@@ -19,8 +19,9 @@ a {
   html {
     color-scheme: dark;
   }
+  
   body {
     color: white;
-    background: rgb(199, 145, 145);
+    background: rgb(255, 165, 165);
   }
 }
