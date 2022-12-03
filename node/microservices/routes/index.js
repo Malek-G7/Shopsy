@@ -5,7 +5,7 @@ let Mongoose = require('mongoose').Mongoose;
 let Schema = require('mongoose').Schema;
 
 let oldMong = new Mongoose();
-oldMong.connect('mongodb://127.0.0.1:27017/db');
+oldMong.connect('mongodb+srv://shopsy:<password>@shopsy.hdgmtdi.mongodb.net/?retryWrites=true&w=majority');
 
 let meetingSchema = new Schema({
   meetingId: String,
