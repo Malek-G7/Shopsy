@@ -6,7 +6,7 @@ import classes from './NewMeetupForm.module.css';
 function NewMeetupForm(props) {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
-  const addressInputRef = useRef();
+  const priceInputRef = useRef();
   const descriptionInputRef = useRef();
 
   function submitHandler(event) {
@@ -14,14 +14,14 @@ function NewMeetupForm(props) {
 
     const enteredTitle = titleInputRef.current.value;
     const enteredImage = imageInputRef.current.value;
-    const enteredAddress = addressInputRef.current.value;
+    const enteredPrice = priceInputRef.current.value;
     const enteredDescription = descriptionInputRef.current.value;
 
     const meetupData = {
       meetingId: enteredTitle,
       title: enteredTitle,
       image: enteredImage,
-      address: enteredAddress,
+      price: enteredPrice,
       description: enteredDescription,
     };
 
@@ -40,8 +40,8 @@ function NewMeetupForm(props) {
           <input type='url' required id='image' ref={imageInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor='address'>Address</label>
-          <input type='text' required id='address' ref={addressInputRef} />
+          <label htmlFor='price'>Price</label>
+          <input type='text' required id='price' ref={priceInputRef} />
         </div>
         <div className={classes.control}>
           <label htmlFor='description'>Description</label>
