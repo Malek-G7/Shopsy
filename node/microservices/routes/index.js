@@ -18,7 +18,6 @@ let meetingSchema = new Schema({
 let meetings = oldMong.model('meetings', meetingSchema);
 
 router.get('/', async function (req, res, next) {
-  const meetings = await getMeetings();
   res.render('index');
 });
 
@@ -28,17 +27,14 @@ router.post('/getMeetings', async function (req, res, next) {
 });
 
 
-router.delete('/remove',async function(req,res,next){
+router.delete('/removeMeeting/_id',async function(req,res,next){
     try{
-      await res.meetings.remove()
+      await res.meetings.deleteOne()
       res.json({message: 'Deleted item'})
     } catch(err){
       res.status(500).json({message: err.message})
     }
 })
-
-
-
 
 
 async function getMeetings() {
@@ -63,9 +59,5 @@ async function saveMeeting(theMeeting) {
   )
   return { saveMeetingResponse: "success" };
 }
-
-
-
-
 
 module.exports = router;

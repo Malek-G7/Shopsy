@@ -1,0 +1,5 @@
+DELETE  http://localhost:3000/removeMeeting
+
+{
+    "_id":"638ba8879b410f9647be7dfb"
+}
