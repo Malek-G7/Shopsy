@@ -1,7 +1,15 @@
 .detail {
+    display: flex;
+    flex-direction: row;
     text-align: center;
 }
 
 .detail img {
-    width: 50%;
+    width: 30%;
+    height: 30%;
+}
+
+.detail > .description{
+    margin-left: auto;
+    margin-right: auto;
 }
