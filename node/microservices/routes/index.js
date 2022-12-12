@@ -5,13 +5,13 @@ let Mongoose = require('mongoose').Mongoose;
 let Schema = require('mongoose').Schema;
 
 let oldMong = new Mongoose();
-oldMong.connect('mongodb+srv://shopsy:<password>@shopsy.hdgmtdi.mongodb.net/?retryWrites=true&w=majority');
+oldMong.connect('mongodb+srv://shopsy:passwordShopsy123@shopsy.hdgmtdi.mongodb.net/?retryWrites=true&w=majority');
 
 let meetingSchema = new Schema({
   meetingId: String,
   title: String,
   image: String,
-  address: String,
+  price: String,
   description: String
 }, { collection: 'meetings' });
 

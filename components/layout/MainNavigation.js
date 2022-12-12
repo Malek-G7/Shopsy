@@ -44,7 +44,8 @@ function MainNavigation() {
     {title: 'Challenge: fix this!', webAddress: '/'}, 
     {title: 'Challenge: fix this!', webAddress: '/'}, 
     {title: 'Challenge: fix this!', webAddress: '/'}, 
-    {title: 'Challenge: fix this!', webAddress: '/'},    {title: 'Challenge: fix this!', webAddress: '/'}, 
+    {title: 'Challenge: fix this!', webAddress: '/'},   
+    {title: 'Challenge: fix this!', webAddress: '/'}, 
     {title: 'Challenge: fix this!', webAddress: '/'}, 
     {title: 'Challenge: fix this!', webAddress: '/'}, 
     {title: 'Challenge: fix this!', webAddress: '/'}, 
@@ -60,10 +61,10 @@ function MainNavigation() {
       <nav>
         <ul>
           <li>
-            <Link href='/'>All Meetups</Link>
+            <Link href='/'>All Items</Link>
           </li>
           <li>
-            <Link href='/new-meetup'>Add New Meetup</Link>
+            <Link href='/new-meetup'>Add New Item</Link>
           </li>
         </ul>
       </nav>

@@ -3,17 +3,21 @@ import classes from './MeetupList.module.css';
 
 function MeetupList(props) {
   return (
-    <ul className={classes.list}>
+    <div className={classes.container}>
       {props.meetups.map((meetup) => (
+        <div className={classes.item}>
         <MeetupItem
           key={meetup.meetingId}
           id={meetup.meetingId}
           image={meetup.image}
           title={meetup.title}
-          address={meetup.address}
+          price={meetup.price}
         />
+        </div>
       ))}
-    </ul>
+
+    </div>
+
   );
 }
 
