@@ -9,7 +9,7 @@ import { createContext, useState, useEffect } from 'react'
 const GlobalContext = createContext()
 
 export function GlobalContextProvider(props) {
-    const [globals, setGlobals] = useState({ aString: 'init val', count: 0, hideHamMenu: true, meetings: [], dataLoaded: false })
+    const [globals, setGlobals] = useState({ aString: 'init val', count: 0, hideHamMenu: true, meetings: [], dataLoaded: false ,basket: []})
 
     useEffect(() => {
         getAllMeetings()
@@ -24,7 +24,17 @@ export function GlobalContextProvider(props) {
             }
         });
         let data = await response.json();
-        setGlobals((previousGlobals) => { const newGlobals = JSON.parse(JSON.stringify(previousGlobals)); newGlobals.meetings = data.meetings; newGlobals.dataLoaded = true; return newGlobals })
+        setGlobals((previousGlobals) => {
+             const newGlobals = JSON.parse(JSON.stringify(previousGlobals));
+                newGlobals.meetings = data.meetings;
+                let i = data.meetings.length
+                newGlobals.dataLoaded = true;
+                newGlobals.basket = new Array(i)
+                newGlobals.basket.fill(false)
+                console.log(newGlobals.meetings)
+                console.log(newGlobals.basket)
+                return newGlobals
+             })
     }
 
     async function editGlobalData(command) { // {cmd: someCommand, newVal: 'new text'}
@@ -52,10 +62,27 @@ export function GlobalContextProvider(props) {
             })
         }
     }
+    function addToBasket(index){
+        setGlobals((previousGlobals) => {
+            const newGlobals = JSON.parse(JSON.stringify(previousGlobals))
+            newGlobals.basket[index] = true
+            console.log(newGlobals.basket)
+            return newGlobals
+        })
+    }
+    function checkout(){
+        setGlobals((previousGlobals) => {
+            const newGlobals = JSON.parse(JSON.stringify(previousGlobals))
+            newGlobals.basket.fill(false)
+            return newGlobals
+        })
+    }
 
     const context = {
         updateGlobals: editGlobalData,
-        theGlobalObject: globals
+        theGlobalObject: globals,
+        addToBasket : addToBasket,
+        checkout:checkout
     }
 
     return <GlobalContext.Provider value={context}>
