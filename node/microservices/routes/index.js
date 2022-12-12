@@ -11,7 +11,7 @@ let meetingSchema = new Schema({
   meetingId: String,
   title: String,
   image: String,
-  address: String,
+  price: String,
   description: String
 }, { collection: 'meetings' });
 

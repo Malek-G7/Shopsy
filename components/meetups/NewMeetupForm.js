@@ -24,7 +24,6 @@ function NewMeetupForm(props) {
       price: enteredPrice,
       description: enteredDescription,
     };
-
     props.onAddMeetup(meetupData);
   }
 
@@ -32,11 +31,11 @@ function NewMeetupForm(props) {
     <Card>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
-          <label htmlFor='title'>Meetup Title (must be unique: it's the meeting ID)</label>
+          <label htmlFor='title'> Title (must be unique: it's the meeting ID)</label>
           <input type='text' required id='title' ref={titleInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor='image'>Meetup Image</label>
+          <label htmlFor='image'>Image</label>
           <input type='url' required id='image' ref={imageInputRef} />
         </div>
         <div className={classes.control}>
@@ -53,7 +52,7 @@ function NewMeetupForm(props) {
           ></textarea>
         </div>
         <div className={classes.actions}>
-          <button>Add Meetup</button>
+          <button>Add item</button>
         </div>
       </form>
     </Card>
