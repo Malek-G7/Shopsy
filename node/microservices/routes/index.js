@@ -27,15 +27,17 @@ router.post('/getMeetings', async function (req, res, next) {
 });
 
 
-router.delete('/removeMeeting/_id',async function(req,res,next){
-    try{
-      await res.meetings.deleteOne()
-      res.json({message: 'Deleted item'})
-    } catch(err){
-      res.status(500).json({message: err.message})
-    }
-})
 
+//Deleting one
+router.delete('/:id',async(req,res) =>{
+  try{
+    await meetings.deleteOne({ _id: req.body._id })
+      res.json({message: 'Deleted sub'})
+   } catch (err){
+       res.status(500).json({message: err.message})
+   }
+
+})
 
 async function getMeetings() {
   data = await meetings.find().lean();

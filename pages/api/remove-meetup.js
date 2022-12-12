@@ -1,6 +1,6 @@
 
 async function handler(req, res) { // can be called anything you like
-    const response = await fetch('http://localhost:8000/deleteMeeting', {
+    const response = await fetch('http://localhost:8000/removeMeeting', {
       method: 'DELETE',
       body: JSON.stringify(req.body),
       headers: {
