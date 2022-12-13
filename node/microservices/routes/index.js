@@ -26,17 +26,18 @@ router.post('/getMeetings', async function (req, res, next) {
   res.json(meetings);
 });
 
-
-
 //Deleting one
 router.delete('/:id',async(req,res) =>{
   try{
-    await meetings.deleteOne({ _id: req.body._id })
-      res.json({message: 'Deleted sub'})
+   const result = await meetings.deleteOne({ _id: req.params.id });
+   if (result.deletedCount == 0){
+    res.status(404).json({message: 'Item not found'});
+   } else{
+    res.json({message: 'Deleted item'})
+   }
    } catch (err){
        res.status(500).json({message: err.message})
    }
-
 })
 
 async function getMeetings() {

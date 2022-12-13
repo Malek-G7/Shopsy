@@ -13,7 +13,6 @@ export function GlobalContextProvider(props) {
 
     useEffect(() => {
         getAllMeetings()
-        removeMeetings()
     }, []);
 
     async function getAllMeetings() {
@@ -36,18 +35,6 @@ export function GlobalContextProvider(props) {
                 console.log(newGlobals.basket)
                 return newGlobals
              })
-    }
-
-    async function removeMeetings() {
-        const response = await fetch('/api/remove-meetings', {
-            method: 'DELETE',
-            body: JSON.stringify({ meetups: 'all' }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-        let data = await response.json();
-        setGlobals((previousGlobals) => { const newGlobals = JSON.parse(JSON.stringify(previousGlobals)); newGlobals.meetings = data.meetings; newGlobals.dataLoaded = true; return newGlobals })
     }
 
     async function editGlobalData(command) { // {cmd: someCommand, newVal: 'new text'}
