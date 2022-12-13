@@ -1,5 +1,3 @@
-DELETE  http://localhost:3000/removeMeeting
+DELETE http://localhost:8000/639791f9d9a9f9151c8733d8
+###
 
-{
-    "_id":"638ba8879b410f9647be7dfb"
-}

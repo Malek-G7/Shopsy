@@ -51,7 +51,7 @@ function NewMeetupForm(props) {
             ref={descriptionInputRef}
           ></textarea>
         </div>
-        <div className={classes.actions}>
+            <div className={classes.actions}>
           <button>Add item</button>
         </div>
       </form>
