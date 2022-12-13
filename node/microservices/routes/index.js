@@ -18,7 +18,6 @@ let meetingSchema = new Schema({
 let meetings = oldMong.model('meetings', meetingSchema);
 
 router.get('/', async function (req, res, next) {
-  const meetings = await getMeetings();
   res.render('index');
 });
 
@@ -26,6 +25,20 @@ router.post('/getMeetings', async function (req, res, next) {
   const meetings = await getMeetings();
   res.json(meetings);
 });
+
+//Deleting one
+router.delete('/:id',async(req,res) =>{
+  try{
+   const result = await meetings.deleteOne({ _id: req.params.id });
+   if (result.deletedCount == 0){
+    res.status(404).json({message: 'Item not found'});
+   } else{
+    res.json({message: 'Deleted item'})
+   }
+   } catch (err){
+       res.status(500).json({message: err.message})
+   }
+})
 
 async function getMeetings() {
   data = await meetings.find().lean();
