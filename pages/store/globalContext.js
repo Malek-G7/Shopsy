@@ -70,6 +70,19 @@ export function GlobalContextProvider(props) {
             return newGlobals
         })
     }
+    function incrementQuantity(index){
+        setGlobals(({
+            ...globals,
+            meetings: [
+              ...globals.meetings.slice(0, index),
+              {
+                ...globals.meetings[index],
+                quantity: Number(globals.meetings[index].quantity ) + 1 
+              },
+              ...globals.meetings.slice(index+1)
+            ]
+          }))
+    }
     function checkout(){
         setGlobals((previousGlobals) => {
             const newGlobals = JSON.parse(JSON.stringify(previousGlobals))
@@ -77,12 +90,13 @@ export function GlobalContextProvider(props) {
             return newGlobals
         })
     }
-
+    
     const context = {
         updateGlobals: editGlobalData,
         theGlobalObject: globals,
         addToBasket : addToBasket,
-        checkout:checkout
+        checkout:checkout,
+        incrementQuantity:incrementQuantity
     }
 
     return <GlobalContext.Provider value={context}>

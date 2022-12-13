@@ -18,7 +18,7 @@ function HomePage() {
     function totalPrice(){
         for (let ii = 0; ii < globalCtx.theGlobalObject.meetings.length; ii++) {
             if (globalCtx.theGlobalObject.basket[ii] == true ) {
-                total += Number(globalCtx.theGlobalObject.meetings[ii].price)
+                total += ( Number(globalCtx.theGlobalObject.meetings[ii].price) * Number(globalCtx.theGlobalObject.meetings[ii].quantity) )
             }
         }
         return total

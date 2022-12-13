@@ -18,6 +18,7 @@ function MeetupDetail(props) {
             <p>{props.description}</p>
             </div>
             <p>Price: $ {props.price}</p>
+            <p>quantity:  {props.quantity}</p>
             <div className={classes.actions}>
                 <button onClick = {()=> {globalCtx.addToBasket(props.id); router.push('/')}} className={classes.button}> Add to basket </button>
             </div>

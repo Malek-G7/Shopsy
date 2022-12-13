@@ -12,6 +12,7 @@ function MeetupList(props) {
           image={meetup.image}
           title={meetup.title}
           price={meetup.price}
+          quantity={meetup.quantity}
         />
         </div>
       ))}
