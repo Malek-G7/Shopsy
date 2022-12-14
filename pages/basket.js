@@ -24,8 +24,6 @@ function HomePage() {
         return total
     }
   
-
-      
     return(
     <div>
         <MeetupList meetups={basket} /> 
