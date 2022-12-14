@@ -8,11 +8,9 @@
   }
   
   .card {
-  background-color: rgb(250, 216, 216);
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgb(141, 201, 193);
+  background-image: linear-gradient(75deg, white, rgb(49, 255, 255));  border-radius: 10px;
+  box-shadow: 0 2px 15px rgb(141, 201, 193);
   max-width: 300px;
   max-height: 500px;
   animation: 1s ease-out slide;
 }
-
