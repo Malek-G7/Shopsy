@@ -25,7 +25,9 @@ function basket() {
     <div>
         <BasketList meetups={basket} /> 
          <button className = {classes.button}  onClick = {()=> {globalCtx.checkout(); router.push('/')}}  >checkout</button>
-         total : $ {total} 
+         <div className={classes.total}>
+         Total : $ {total} 
+         </div>
     </div>
   
     ) 
