@@ -12,7 +12,8 @@ let meetingSchema = new Schema({
   title: String,
   image: String,
   price: String,
-  description: String
+  description: String,
+  quantity : String
 }, { collection: 'meetings' });
 
 let meetings = oldMong.model('meetings', meetingSchema);

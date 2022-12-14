@@ -20,7 +20,9 @@ function MeetupItem(props) {
         </div>
         <div className={classes.price}>
           <p>Price: ${props.price}</p>
+          <p>quantity: {props.quantity}</p>
         </div>
+        
         <div className={classes.actions}>
           <button onClick={showDetailsHandler}>Description</button>
         </div>

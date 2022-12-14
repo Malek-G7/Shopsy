@@ -1,18 +1,17 @@
-import MeetupItem from './MeetupItem';
+import BasketItem from './BasketItem';
 import classes from './MeetupList.module.css';
 
-function MeetupList(props) {
+function BasketList(props) {
   return (
     <div className={classes.container}>
-      {props.meetups.map((meetup) => (
+      {props.meetups.map((meetup,index) => (
         <div className={classes.item}>
-        <MeetupItem
-          key={meetup.meetingId}
+        <BasketItem
           id={meetup.meetingId}
           image={meetup.image}
           title={meetup.title}
           price={meetup.price}
-          quantity={meetup.quantity}
+          quantity = {meetup.quantity}
         />
         </div>
       ))}
@@ -22,4 +21,4 @@ function MeetupList(props) {
   );
 }
 
-export default MeetupList;
+export default BasketList;
