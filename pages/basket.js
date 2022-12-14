@@ -24,13 +24,13 @@ function HomePage() {
         return total
     }
   
-
-      
     return(
     <div>
         <MeetupList meetups={basket} /> 
          <button className = {classes.button}  onClick = {()=> {globalCtx.checkout(); router.push('/')}}  >checkout</button>
+         <div className={classes.total}>
          total : $ {totalPrice()} 
+         </div>
     </div>
   
     ) 
