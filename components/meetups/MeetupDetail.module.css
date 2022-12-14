@@ -38,7 +38,9 @@
 }
 
 .about{
-    background-color: #ffffff;
+    color: yellow;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.5px;
 }
 .button {
     font: inherit;

@@ -8,9 +8,10 @@
   padding: 0 10%;
 }
 
-.title{
+.header > .title{
   margin-left: 440px;
-  font-size: 25px;
+  font-size: 40px;
+  margin-bottom: 30px;
 }
 
 .logo {
@@ -33,7 +34,7 @@
 
 .header a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 30px;
   color: rgb(2, 2, 2);
 }
 

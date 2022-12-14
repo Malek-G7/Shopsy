@@ -59,7 +59,7 @@ function MainNavigation() {
       <HamMenu toggleMenuHide={() => toggleMenuHide()} />
       <HamMenuFAB toggleMenuHide={() => toggleMenuHide()} />
       <div className={classes.title}>
-        <h1>SHOPSY</h1>
+        <h1> <Link href='/'>SHOPSY</Link></h1>
         </div>
       <nav>
         <ul>
