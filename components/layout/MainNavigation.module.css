@@ -4,8 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color:  #4b5f00;
+  background-color:  #85e7ff;
   padding: 0 10%;
+}
+
+.title{
+  margin-left: 440px;
+  font-size: 25px;
 }
 
 .logo {
