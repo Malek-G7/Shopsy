@@ -18,8 +18,21 @@ const globalCtx = useContext(GlobalContext)
           <p>Price: ${props.price}</p>
           <p>quantity: {props.quantity}</p>
         </div>
+        <div className={classes.icons}>
+        <button onClick = {()=> {globalCtx.incrementQuantity(props.price)}}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={classes.icon}>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
+          </button>
+        <button onClick = {()=> {globalCtx.decrementQuantity(props.price)}}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={classes.icon}>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+        </svg>
+        </button>
+        </div>
+        
       </Card>
-      <button onClick = {()=> {globalCtx.incrementQuantity(3)}}></button>
+      
     </li>
   );
 }
