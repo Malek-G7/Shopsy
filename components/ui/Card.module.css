@@ -8,7 +8,8 @@
   }
   
   .card {
-  background-image: linear-gradient(75deg, white, rgb(49, 255, 255));  border-radius: 10px;
+    background-image: linear-gradient(red, yellow);
+    border-radius: 10px;
   box-shadow: 0 2px 15px rgb(141, 201, 193);
   max-width: 300px;
   max-height: 500px;

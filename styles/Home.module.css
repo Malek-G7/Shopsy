@@ -130,9 +130,16 @@
 .button {
   font: inherit;
   cursor: pointer;
-  color:  #1a2920;
-  border: 1px solid #77002e;
-  background-color: transparent;
+  color:  #38ffff;
+  border: 1px solid #15f7ff;
+  background-color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
+}
+
+.welcome{
+  color: aqua;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 0 3px 24px rgb(141, 201, 193);
 }

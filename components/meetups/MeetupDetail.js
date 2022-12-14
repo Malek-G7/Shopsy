@@ -13,7 +13,10 @@ function MeetupDetail(props) {
             <img src={props.image} alt={props.title} />
             <div className={classes.description}>
             <h1>{props.title}</h1>
+            <p>About the product:</p>
+            <div className = {classes.about}>
             <p>{props.description}</p>
+            </div>
             <p>Price: $ {props.price}</p>
             <div className={classes.actions}>
                 <button onClick = {()=> {globalCtx.addToBasket(props.id); router.push('/')}} className={classes.button}> Add to basket </button>
