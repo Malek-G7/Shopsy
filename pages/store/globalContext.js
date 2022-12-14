@@ -86,17 +86,19 @@ export function GlobalContextProvider(props) {
     }
     function decrementQuantity(i){
         let index = globals.meetings.findIndex(element => element.price === i);
-        setGlobals(({
-            ...globals,
-            meetings: [
-              ...globals.meetings.slice(0, index),
-              {
-                ...globals.meetings[index],
-                quantity: Number(globals.meetings[index].quantity ) - 1 
-              },
-              ...globals.meetings.slice(index+1)
-            ]
-          }))
+        if(globals.meetings[index].quantity>0){
+            setGlobals(({
+                ...globals,
+                meetings: [
+                  ...globals.meetings.slice(0, index),
+                  {
+                    ...globals.meetings[index],
+                    quantity: Number(globals.meetings[index].quantity ) - 1 
+                  },
+                  ...globals.meetings.slice(index+1)
+                ]
+              }))
+        }
     }
 
     function checkout(){
