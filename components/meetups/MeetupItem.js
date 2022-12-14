@@ -12,11 +12,13 @@ function MeetupItem(props) {
   return (
     <li className={classes.item}>
       <Card>
+      <div className={classes.title}>
+      <h3>{props.title}</h3>
+      </div>
         <div className={classes.image}>
           <img src={props.image} alt={props.title} />
         </div>
         <div className={classes.content}>
-          <h3>{props.title}</h3>
           <p>Price: ${props.price}</p>
         </div>
         <div className={classes.actions}>

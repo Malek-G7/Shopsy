@@ -13,13 +13,14 @@
 .detail > .description{
     display: flex;
     flex-direction: column;
+    color: crimson;
     width: 700px;
     height: 650px;
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
     border-width: 2px;
-    border-color: black;
+    border-color: rgb(255, 255, 255);
     border-radius: 50px;
     font-size: 25px;
     padding: 10px;
@@ -28,9 +29,9 @@
 .button {
     font: inherit;
     cursor: pointer;
-    color:  #1a2920;
-    border: 1px solid #77002e;
-    background-color: transparent;
+    color:  #ffffff;
+    border: 1px solid #ff0062;
+    background-color: blue;
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
   }
